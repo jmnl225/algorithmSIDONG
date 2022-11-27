@@ -1,0 +1,14 @@
+function solution(price, money, count) {
+    let answer = 0; 
+    let amount = 0;
+    
+    for(i=0; i<count; i++){
+         amount += i*price;
+    }
+    if(money<amount){
+        answer = amount - money;
+    }else{
+        anwer = 0;
+    }
+    return answer;
+}
