@@ -1,0 +1,18 @@
+function solution(left, right) {
+    var answer = 0;
+    
+    //left ~ right
+    for(let i=left; i<=right; i++){
+        let cnt = 0;
+        //1 ~ i
+        for(let j=1; j<=i; j++){
+            if(i%j === 0){
+                cnt += 1;
+            }
+        }
+        //cnt 개수에 따라 덧셈 뺄셈
+       answer = cnt%2 === 0 ? answer += i : answer -= i;
+    }
+    
+    return answer;
+}
