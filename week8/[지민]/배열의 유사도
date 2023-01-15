@@ -1,0 +1,11 @@
+function solution(s1, s2) {
+    var answer = 0;
+    for(let i of s1){//for of루프 배열에 대한 반복
+        for(let j of s2){
+            if(i==j){
+                answer++
+            }
+        }
+    }
+    return answer;
+}
